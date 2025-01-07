@@ -41,3 +41,24 @@ jobs:
         with:
           name: build
           path: build/
+
+                      - name: Jinja2 Engine Repo
+  # You may pin to the exact commit or the version.
+  # uses: fletort/jinja2-template-action@cee4fb7f250dab558dbbb5c527931bf9d6095380
+  uses: fletort/jinja2-template-action@v1.2.0
+  with:
+    # Key, value pairs in .env file format (key=value)
+    variables: # optional, default is 
+    # Put to `true` to keep original template file.
+    keep_template: # optional
+    # Source file contening inputs variable for the jinja template.
+    data_file: # optional, default is 
+    # Format of the `data_file`. Can be `env`, `ini`, `yaml`, `json` or `automatic` (for automatic detection). The automatic detction is based on the extension then on the content.
+    data_format: # optional, default is automatic
+    # Link to a file contening inputs variable for the jinja template.
+    data_url: # optional, default is 
+    # Format of the `url_file`. Can be `env`, `ini`, `yaml`, `json` or `automatic` (for automatic detection). The automatic detction is based on the content-type http header then on the content.
+    data_url_format: # optional, default is automatic
+    # 
+    undefined_behaviour: # optional, default is 
+          
